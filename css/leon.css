@@ -1,0 +1,143 @@
+:root{
+    --main-color : #10cab7;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ body{
+    font-family: 'Work Sans' , sans-serif;
+ }
+ .container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+ }
+ 
+ @media (min-width: 576px) {
+    .container{
+        width: 566px; 
+       }  
+ }
+ @media (min-width: 768px) {
+  .container{
+  width: 750px;
+ }  
+ }
+ @media (min-width: 992px) {
+    .container{
+        width: 970px;
+       }    
+ }
+ @media (min-width: 1200px) {
+    .container{
+        width: 1170px; 
+       }  
+ }
+ .header{
+    padding: 20px;
+ }
+ .header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .logo{
+    width: 60px;
+    margin: 0;
+ }
+ .links {
+    position: relative;
+ }
+  .links:hover .icons span:nth-child(2){
+    width: 100%;
+  }
+ .icons{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+ }
+
+ .icons span{
+    
+    background-color: #333;
+    height: 2px;
+    margin-bottom: 5px;
+ }
+ .icons span:first-child{
+    width: 100%;
+ }
+ .icons span:nth-child(2){
+    width: 60%;
+    transition: 0.3s;
+ }
+ .icons span:last-child{
+    width: 100%;
+ }
+ .links ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top:  calc(100% + 15px);
+    display: none;
+    z-index: 1;
+ }
+ 
+ .header .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 0px;
+    top: -20px;
+ }
+ .links:hover ul{
+    display: block;
+ }
+ .header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+ }
+ .header .links ul li a:hover{
+    padding-left: 25px;
+
+ }
+ .header .links ul li:not(:last-child) a{
+    border-bottom: 1px solid #ddd;
+ }
+ .landing{
+    background-image: url(../landing.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+ }
+ .landing .intro-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+ }
+ .landing .intro-text h1{
+    color: var(--main-color) ;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+ }
+ .landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+ }
